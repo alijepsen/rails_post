@@ -1,0 +1,22 @@
+<h1>All Posts</h1>
+
+<hr/>
+
+<!-- loop all of the posts and output some info about them -->
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= post.author %> :
+      <%= post.title %> -
+      <%= link_to 'Show', post_path(post) %> -
+      <%= link_to 'Edit', edit_post_path(post) %> -
+      <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} %> <!--adding method and verb changes from get to delete -->
+    </li>
+  <% end %>
+</ul>
+
+<!-- no matter what, want to create a post from index page -->
+<!-- helpers -->
+<!-- link helper - this is a method in rails and send params; use path prefixes rake route prefix_path-->
+
+<%= link_to 'New Post', new_post_path %>

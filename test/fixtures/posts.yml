@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  title: MyString
+  author: MyString
+  public: false
+
+two:
+  body: MyText
+  title: MyString
+  author: MyString
+  public: false
